@@ -17,3 +17,7 @@ while i < l:
         integ.append(int(s_int))
  
 print(integ)
+
+S.isdigit() #Состоит ли строка из цифр
+
+S.isalpha() #Состоит ли строка из букв
