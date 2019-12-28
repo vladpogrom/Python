@@ -1,13 +1,24 @@
-#Цикл, в нем
-  #Читаем строку (s). Удаляем первый элемент строки s.del[0]
-  #Запоминаем среднее значение(av_sum) av_sum = (sum(s)) / len(s)
-  #Добавляем к строке (sum_1) s[0] через append
-  #Добавляем к строке (sum_2) s[1] через append
-  #Добавляем к строке (sum_3) s[2] через append
-  #Счетчику (x) присваиваем += 1
-  #выводим av_sum
-#В конце print( sum_1/x, sum_2/x, sum_3/x)
-
-
-#построчное чтение строки и разбиение через ";"
-text = open('dataset_3363_3.txt').read().split(;)
+text = open('dataset_3363_4.txt', 'r', encoding='utf-8').read().split('\n')
+x = 0
+sum_1 = 0
+sum_2 = 0
+sum_3 = 0
+for i in text:
+  c = str(i).split(';')
+  av_sum = (int(c[1]) + int(c[2]) + int(c[3])) / 3
+  f = open('answer.txt', 'a')
+  f.write(str(av_sum) + '\n')
+  x +=1
+  sum_1 += int(c[1])
+  sum_2 += int(c[2])
+  sum_3 += int(c[3])
+sum_1 = sum_1 / x
+sum_2 = sum_2 / x
+sum_3 = sum_3 / x
+f = open('answer.txt', 'a')
+f.write(str(sum_1) + ' ')
+f = open('answer.txt', 'a')
+f.write(str(sum_2) + ' ')
+f = open('answer.txt', 'a')
+f.write(str(sum_3) + ' ')
+print(sum_3)
